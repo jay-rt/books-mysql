@@ -2,3 +2,11 @@ GET http://localhost:5000/api/books
 
 ###
 POST http://localhost:5000/api/books
+Content-Type: application/json
+
+{
+    "title": "title from client",
+    "desc": "desc from client",
+    "price": 123,
+    "cover": "cover from client"
+}

@@ -4,11 +4,6 @@ import booksRouter from "../routes/books.js";
 const app = express();
 
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.json("This is the backend");
-});
-
 app.use("/api/books", booksRouter);
 
 app.listen(5000, () => {

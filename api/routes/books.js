@@ -14,11 +14,12 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   const q = "INSERT INTO books (`title`, `desc`, `price`, `cover`) VALUES (?)";
   const values = [
-    "title from backend",
-    "desc from backend",
-    123,
-    "cover from backend",
+    req.body.title,
+    req.body.desc,
+    req.body.price,
+    req.body.cover,
   ];
+
   db.query(q, [values], (err, data) => {
     if (err) return res.json(err);
     return res.json("Books has been created successfully.");
