@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Book from "../components/Book";
 
 export const booksLoader = async () => {
@@ -10,7 +10,7 @@ export const booksLoader = async () => {
 const Books = () => {
   const books = useLoaderData();
   return (
-    <>
+    <div className="books__container">
       <h1>Jay's Book Shop</h1>
       <div className="books">
         {books.map((book) => (
@@ -23,7 +23,10 @@ const Books = () => {
           />
         ))}
       </div>
-    </>
+      <Link to="/add">
+        <button className="btn add">Add new book</button>
+      </Link>
+    </div>
   );
 };
 

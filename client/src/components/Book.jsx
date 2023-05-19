@@ -5,6 +5,8 @@ const Book = ({ title, desc, price, cover }) => {
       <h2>{title}</h2>
       <p>{desc}</p>
       <span>{price}</span>
+      <button className="btn delete">Delete</button>
+      <button className="btn update">Update</button>
     </div>
   );
 };
