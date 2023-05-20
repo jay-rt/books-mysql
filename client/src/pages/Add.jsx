@@ -61,7 +61,9 @@ const Add = () => {
         placeholder="Book's cover image link"
         onChange={handleChange}
       />
-      <button onClick={handleClick}>Add</button>
+      <button className="form__btn" onClick={handleClick}>
+        Add
+      </button>
     </div>
   );
 };
